@@ -1,0 +1,25 @@
+node_modules
+dist
+dev.log
+*.local
+.DS_Store
+
+# screenshots / artefatos de validação
+shot.png
+hero.png
+*-full.png
+val-*.png
+rebuild-*.png
+chk-*.png
+lightbox-*.png
+stitch-*.png
+stitch-*.html
+
+# backups de imagens originais (não vão para o deploy)
+_originals/
+
+.vercel
+cal-*.png
+fold-*/top-*.png
+
+.vercel
