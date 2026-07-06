@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Icon } from "../icons.jsx"
 import { Reveal, SectionTitle } from "./ui.jsx"
 import { services, whatsappLink, whatsappMsg } from "../data.js"
@@ -13,10 +14,8 @@ export default function Services() {
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.items.map((item, i) => (
             <Reveal key={item.title} delay={(i % 3) * 0.08}>
-              <a
-                href={whatsappLink(`${whatsappMsg} Serviço: ${item.title}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={`/${item.slug}`}
                 className="flex h-full flex-col justify-between rounded-xl bg-velocity-red p-8 shadow-lg transition-transform duration-300 hover:-translate-y-2"
               >
                 <div>
@@ -27,7 +26,7 @@ export default function Services() {
                   {services.more}
                   <Icon name="chevron_right" className="ml-2" />
                 </span>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

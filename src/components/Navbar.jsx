@@ -5,7 +5,7 @@ import { company, nav, whatsappLink, whatsappMsg } from "../data.js"
 
 const contactBoxes = [
   { icon: "call", label: "Telefone", value: company.landlineDisplay, href: `tel:+${company.landlineRaw}` },
-  { icon: "schedule", label: "Atendimento", value: "Seg a Sex: 08h–18h" },
+  { icon: "schedule", label: "Atendimento", value: "Seg–Sex 8h–17h30 · Sáb 8h–12h" },
   { icon: "mail", label: "E-mail", value: company.email, href: `mailto:${company.email}` },
 ]
 
@@ -27,14 +27,16 @@ function IconBox({ icon, label, value, href }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState("#top")
+  const [active, setActive] = useState(nav.links[0]?.href)
 
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY + 140
-      let current = "#top"
+      let current = nav.links[0]?.href
       for (const l of nav.links) {
-        const el = l.href.startsWith("#") ? document.querySelector(l.href) : null
+        const i = l.href.indexOf("#")
+        const hash = i >= 0 ? l.href.slice(i) : ""
+        const el = hash ? document.querySelector(hash) : null
         if (el && el.offsetTop <= y) current = l.href
       }
       setActive(current)

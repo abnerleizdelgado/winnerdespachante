@@ -1,4 +1,4 @@
-import { Icon } from "../icons.jsx"
+import { Icon, InstagramIcon, FacebookIcon } from "../icons.jsx"
 import { company, footer, whatsappLink, whatsappMsg } from "../data.js"
 
 export default function Footer() {
@@ -17,6 +17,24 @@ export default function Footer() {
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-on-primary transition-colors hover:bg-velocity-red"
             >
               <Icon name="chat" fill className="text-xl" />
+            </a>
+            <a
+              href={company.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-on-primary transition-colors hover:bg-velocity-red"
+            >
+              <InstagramIcon size={20} />
+            </a>
+            <a
+              href={company.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-on-primary transition-colors hover:bg-velocity-red"
+            >
+              <FacebookIcon size={20} />
             </a>
           </div>
         </div>

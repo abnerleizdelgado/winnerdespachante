@@ -39,6 +39,7 @@ export default function LocationContact() {
 
               <Info icon="schedule" title={location.hoursTitle}>
                 <p className="text-slate-gray">{company.hours}</p>
+                <p className="text-slate-gray">{company.hoursSat}</p>
               </Info>
             </div>
 

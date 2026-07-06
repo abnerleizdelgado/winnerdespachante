@@ -12,12 +12,15 @@ export const company = {
   landlineDisplay: "(19) 3291-3494",
   landlineRaw: "551932913494",
   email: "winner@winnerdespachante.com.br",
+  instagram: "https://www.instagram.com/winner_despachante/",
+  facebook: "https://www.facebook.com/winnercampinas",
   address1: "Av. Mirandópolis, 520 - Vila Pompéia",
   address2: "Campinas - SP, 13050-470",
   // Google Maps embed (sem API key)
   mapEmbed:
     "https://maps.google.com/maps?q=Av.%20Mirand%C3%B3polis%2C%20520%2C%20Vila%20Pomp%C3%A9ia%2C%20Campinas%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed",
-  hours: "Segunda a Sexta: 08h às 18h",
+  hours: "Segunda a sexta: 08h às 17h30",
+  hoursSat: "Sábado: 08h às 12h",
   region: "Campinas e Região",
 }
 
@@ -29,16 +32,16 @@ export const whatsappLink = (msg) =>
 
 export const nav = {
   links: [
-    { href: "#top", label: "Início" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#solucoes", label: "Soluções" },
-    { href: "#contato", label: "Contato" },
+    { href: "/#top", label: "Início" },
+    { href: "/#servicos", label: "Serviços" },
+    { href: "/#solucoes", label: "Soluções" },
+    { href: "/#contato", label: "Contato" },
   ],
   cta: "Fale Conosco",
 }
 
 export const hero = {
-  title: "Conte com o Despachante Campeão de Campinas e Região!",
+  title: "Despachante em Campinas e Região: o Campeão da sua Documentação Veicular",
   subtitle:
     "Agilidade e confiança para regularizar sua documentação veicular sem burocracia.",
   cta: "QUERO REGULARIZAR AGORA",
@@ -66,12 +69,12 @@ export const services = {
   title: "Nossos Serviços",
   cta: "Clique aqui para ver todos os serviços",
   items: [
-    { icon: "badge", title: "Licenciamento em 12X" },
-    { icon: "swap_horiz", title: "Transferência de Proprietário" },
-    { icon: "new_releases", title: "Primeiro Emplacamento" },
-    { icon: "handyman", title: "Remarcação de Chassi e Motor" },
-    { icon: "directions_car", title: "Placa Mercosul" },
-    { icon: "verified", title: "Vistoria Veicular" },
+    { icon: "badge", title: "Licenciamento em 12X", slug: "licenciamento-campinas" },
+    { icon: "swap_horiz", title: "Transferência de Proprietário", slug: "transferencia-de-veiculo-campinas" },
+    { icon: "new_releases", title: "Primeiro Emplacamento", slug: "primeiro-emplacamento-campinas" },
+    { icon: "handyman", title: "Remarcação de Chassi e Motor", slug: "remarcacao-chassi-motor" },
+    { icon: "directions_car", title: "Placa Mercosul", slug: "placa-mercosul-campinas" },
+    { icon: "verified", title: "Vistoria Veicular", slug: "vistoria-veicular-campinas" },
   ],
   more: "Saiba mais",
 }
@@ -90,11 +93,11 @@ export const solutions = {
   title: "Soluções Completas",
   sub: "Tudo o que você precisa em um só lugar",
   slides: [
-    { src: "/img/sol-1-ipva.png", alt: "IPVA" },
-    { src: "/img/sol-2-apreendido.png", alt: "Carro Apreendido" },
-    { src: "/img/sol-3-multas.png", alt: "Multas Pendentes" },
-    { src: "/img/sol-4-parcelamento.png", alt: "Parcelamento 12x" },
-    { src: "/img/sol-5-calendario.png", alt: "Calendário de Licenciamento" },
+    { src: "/img/sol-1-ipva.png", alt: "Parcelamento de IPVA em Campinas" },
+    { src: "/img/sol-2-apreendido.png", alt: "Regularização de veículo apreendido em Campinas" },
+    { src: "/img/sol-3-multas.png", alt: "Parcelamento de multas veiculares em Campinas" },
+    { src: "/img/sol-4-parcelamento.png", alt: "Parcelamento de débitos veiculares em até 12x no cartão" },
+    { src: "/img/sol-5-calendario.png", alt: "Calendário de licenciamento de veículos em Campinas" },
   ],
 }
 
@@ -154,14 +157,14 @@ export const footer = {
   links: [
     { label: "Privacidade", href: "#" },
     { label: "Termos de Uso", href: "#" },
-    { label: "Localização", href: "#contato" },
-    { label: "Contato", href: "#contato" },
+    { label: "Localização", href: "/#contato" },
+    { label: "Contato", href: "/#contato" },
   ],
   services: [
-    { label: "Licenciamento", href: "#servicos" },
-    { label: "Transferência", href: "#servicos" },
-    { label: "Emplacamento", href: "#servicos" },
-    { label: "Multas", href: "#servicos" },
+    { label: "Licenciamento", href: "/licenciamento-campinas" },
+    { label: "Transferência", href: "/transferencia-de-veiculo-campinas" },
+    { label: "Emplacamento", href: "/primeiro-emplacamento-campinas" },
+    { label: "Multas e débitos", href: "/parcelamento-debitos-veiculares" },
   ],
   copyright: "© 2024 Winner Despachante. Todos os direitos reservados.",
 }
